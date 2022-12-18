@@ -1,7 +1,7 @@
 #!/system/bin/sh
 # This script is needed to set some device props
 
-oplus_project="$project"
+oplus_project=$(getprop ro.boot.prjname)
 DIR="/odm/etc/$oplus_project"
 
 if [ ! -d "$DIR" ]; then
