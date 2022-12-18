@@ -1,4 +1,4 @@
-# Android device tree for qti Holi for arm64 (holi)
+# TWRP device tree for Realme Q5 (RMX3478)
 
 ```
 #

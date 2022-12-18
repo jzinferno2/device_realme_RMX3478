@@ -5,6 +5,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-add_lunch_combo omni_holi-user
-add_lunch_combo omni_holi-userdebug
-add_lunch_combo omni_holi-eng
+export ALLOW_MISSING_DEPENDENCIES=true

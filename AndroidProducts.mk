@@ -6,9 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_holi.mk
+    $(LOCAL_DIR)/twrp_RMX3478.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_holi-user \
-    omni_holi-userdebug \
-    omni_holi-eng
+    twrp_RMX3478-eng
