@@ -56,14 +56,14 @@ my_manifest                                /my_manifest           ext4    ro,bar
 my_manifest                                /my_manifest           erofs   ro                                            wait,slotselect,logical,first_stage_mount,nofail
 my_engineering                             /my_engineering        ext4    ro,barrier=1                                  wait,slotselect,logical,first_stage_mount
 my_engineering                             /my_engineering        erofs   ro                                            wait,slotselect,logical,first_stage_mount
-#/dev/block/by-name/oplusreserve2           /cache             ext4   nosuid,nodev,noatime,barrier=1                           wait,check,first_stage_mount
+/dev/block/by-name/oplusreserve2           /cache             ext4   nosuid,nodev,noatime,barrier=1                           wait,check,first_stage_mount
 #common_preload /common_preload ext4 ro wait,logical,first_stage_mount
 /dev/block/by-name/preload /special_preload ext4 ro wait
 /dev/block/by-name/metadata                /metadata       ext4    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount
 /dev/block/bootdevice/by-name/userdata      /data          f2fs    noatime,nosuid,nodev,discard,inlinecrypt,reserve_root=32768,resgid=1065,fsync_mode=nobarrier    latemount,resize,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,metadata_encryption=aes-256-xts:wrappedkey_v0,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
-#/dev/block/mmcblk1p1                       /external_sd    vfat    nosuid,nodev                                                    defaults
+/dev/block/mmcblk1p1                       /external_sd    vfat    nosuid,nodev                                                    defaults
 #Shuangquan.Du@PSW.AD.Recovery.0, 2018/07/21, Add for usb otg
-#/dev/block/sdg1                            /usb_otg        vfat    nosuid,nodev                                                    defaults
+/dev/block/sdg1                            /usb_otg        vfat    nosuid,nodev                                                    defaults
 /dev/block/bootdevice/by-name/boot         /boot           emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/recovery     /recovery       emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/misc         /misc           emmc    defaults                                                        defaults
@@ -93,7 +93,7 @@ my_engineering                             /my_engineering        erofs   ro    
 /dev/block/bootdevice/by-name/apdp         /apdp           emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/devinfo      /devinfo        emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/persist      /persist        ext4    defaults                                                        defaults
-#/dev/block/bootdevice/by-name/oplusreserve2 /opporeserve    ext4    rw,seclabel,nosuid,nodev,noatime,data=ordered                   wait
+/dev/block/bootdevice/by-name/oplusreserve2 /opporeserve    ext4    rw,seclabel,nosuid,nodev,noatime,data=ordered                   wait
 /dev/block/bootdevice/by-name/abl          /abl            emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/ablbak       /ablbak         emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/xbl          /xbl            emmc    defaults                                                        defaults
